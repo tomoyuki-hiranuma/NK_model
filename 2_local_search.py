@@ -33,7 +33,7 @@ K - set to 2 for which_imatrix = 2, 3, and 4. For which_imatrix=1 you can choose
 
 # You can change those ---
 which_imatrix = 1      # | type of the interaction matrix
-K = 2                  # | number of interdependencies per decision variable
+K = 5                  # | number of interdependencies per decision variable
 p_jump = 0.1           # | probability of a long jump in a given round
 # ------------------------
 
@@ -43,7 +43,7 @@ if which_imatrix >1:  # to avoid a common mistake
 # *** 1. LOAD THE NK LANDSCAPE FILE *****************************************
 
 file_name = expanduser("~")
-NK_landscape = np.load(file_name + '\\NK_workshop\\NK_land_type_' + str(which_imatrix) +
+NK_landscape = np.load(file_name + '/Documents/research-code/NK_workshop/NK_land_type_' + str(which_imatrix) +
                        '_K_' + str(K) + '_i_' + str(i) + '.npy')
 
 power_key = np.power(2, np.arange(N - 1, -1, -1))
