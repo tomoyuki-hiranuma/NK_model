@@ -293,9 +293,9 @@ plt.ylabel('frequency', size=10)
 #==============================================================================
 
 file_name = os.path.expanduser("~")  # we will save it in your home folder
-if not os.path.exists(file_name + '\\NK_workshop\\'):
-    os.makedirs(file_name + '\\NK_workshop\\')
-np.save(file_name + '\\NK_workshop\\NK_land_type_' + str(which_imatrix) +
+if not os.path.exists(file_name + '/Documents/research-code/NK_workshop/'):
+    os.makedirs(file_name + '/Documents/research-code/NK_workshop/')
+np.save(file_name + '/Documents/research-code/NK_workshop/NK_land_type_' + str(which_imatrix) +
         '_K_' + str(K) + '_i_' + str(i) + '.npy', Landscape_data)
 
 elapsed_time = time() - start
