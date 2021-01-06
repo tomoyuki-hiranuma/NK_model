@@ -283,6 +283,7 @@ plt.hist(number_of_peaks, bins=20, range=(1, 20), color='dodgerblue', edgecolor=
 plt.title('Distribution of the number of peaks', size=12)
 plt.xlabel('number of peaks', size=10)
 plt.ylabel('frequency', size=10)
+plt.show()
 
 
 # *** SAVING THE LANDSCAPES AS A BINARY FILE FOR FUTURE RETRIEVAL ************
@@ -300,5 +301,5 @@ np.save(file_name + '/Documents/research-code/NK_workshop/NK_land_type_' + str(w
 
 elapsed_time = time() - start
 print('time: ' + str("%.2f" % elapsed_time) + ' sec')
-print(Landscape_data)
+
 # END OF LINE
