@@ -58,7 +58,7 @@ which_imatrix = 1  # defines the type of an interaction matrix
                    # choose 1 for random, 2 for modular, 3 for nearly modular,
                    # 4 for diagonal, 5 for highly influential, and
                    # 6 for highly dependent, 7 local (see below)
-K = 5  # only has an effect when you choose the random interaction matrix (1)
+K = 2  # only has an effect when you choose the random interaction matrix (1)
        # set to 2 for other interaction matrices
 
 
@@ -300,5 +300,5 @@ np.save(file_name + '/Documents/research-code/NK_workshop/NK_land_type_' + str(w
 
 elapsed_time = time() - start
 print('time: ' + str("%.2f" % elapsed_time) + ' sec')
-
+print(Landscape_data)
 # END OF LINE

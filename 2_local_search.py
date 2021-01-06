@@ -33,7 +33,7 @@ K - set to 2 for which_imatrix = 2, 3, and 4. For which_imatrix=1 you can choose
 
 # You can change those ---
 which_imatrix = 1      # | type of the interaction matrix
-K = 5                  # | number of interdependencies per decision variable
+K = 2                  # | number of interdependencies per decision variable
 p_jump = 0.1           # | probability of a long jump in a given round
 # ------------------------
 
