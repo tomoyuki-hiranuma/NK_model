@@ -37,6 +37,9 @@ def calc_fitness(individual):
     return sum(individual) # リスト要素の合計
 
 # 集団を適応度順にソートする
+"""
+ Todo: 評価値としてNKモデルでの評価値を採用
+"""
 def sort_fitness(population):
     fp = []
     for individual in population:
