@@ -57,6 +57,7 @@ def sort_fitness(population):
 def selection(population):
     sorted_population = sort_fitness(population)
     n = int(POPULATION_SIZE * SELECT_RATE)
+
     return sorted_population[0 : n]
 
 # 1点交叉
@@ -110,16 +111,42 @@ def do_one_gengeration(population):
 def print_population(population):
     for individual in population:
         print(individual)
+        
+def get_best_individual(population):
+    better_eval = 0.0
+    better_gene = []
+    for individual in population:
+        fitness = calc_fitness(individual)
+        if better_eval <= fitness:
+          better_eval = fitness
+          better_gene = individual
+    return better_gene, better_eval
 
 # メイン処理
+best_gene = [0 for i in range(N)]
+best_eval = 0.0
 # 初期集団を生成（ランダムに0/1を10個ずつ並べる）
 if __name__ == '__main__':
     population = init_population()
     generation_count = 0
-    while generation_count <= GENERATION:
-        # print(str(generation_count + 1) + u"世代")
+    
+    x = []
+    y = []
+
+    while generation_count < GENERATION:
+        print(str(generation_count + 1) + u"世代")
         population = do_one_gengeration(population)
-        # print_population(population)
+        # print_population(population)
+        best_gene, best_eval = get_best_individual(population)
+        print("best gene: {}\nbest evaluation: {}".format(best_gene, best_eval))
         generation_count += 1
 
-        
+        ### 出力用
+        x.append(generation_count)
+        y.append(best_eval)
+    
+    ## グラフ
+    plt.plot(x, y)
+    plt.show()
+
+    
