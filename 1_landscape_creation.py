@@ -50,7 +50,7 @@ start = time()  # starts the clock used to measure the execution speed
 
 # NK landscape parameters -----------------------------------------
 N = 6  # number of detailed decisions per lower level landscape   |
-i = 1000  # we will generate 1000 NK landscapes to begin with     |
+i = 1  # we will generate 1000 NK landscapes to begin with     |
 # -----------------------------------------------------------------
 
 # You can change the following variables:
